@@ -1,14 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+  <title>Group 3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    
+
+
+    <!-- //this is the Jumbotron -->
+        <div class="container">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Welcome </h1>  
+    <h2> Got Pet?</h2> 
+
+    <p>This will be our Mission Statement </p>
+  </div>
+</div>
+</div>
+
+
+
+<!-- //This is the input form for zipcode -->
+<div class="container">
+        <h2>Location</h2>
+        <form action="/action_page.php">
+         
+          <div class="form-group">
+            <label for="zipcode">zipcode:</label>
+            <input type="zipcode" class="form-control" id="zipcode" placeholder="Enter zipcode" name="zipcode">
+          </div>
+          
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+      </div>
+      <br>
+
+
+      <!-- //This is the type of pet (argument = animal) -->
+      <div class="container">
+      <form>
+            <select name="animal" class="custom-select">
+              <option selected>Type of animal</option>
+              <option value="Dog">Dog</option>
+              <option value="Cat">Cat</option>
+              <option value="Bird">Bird</option>
+            </select>
+          </form>
+          </div>
+
+
+
+
+
+
 </body>
 </html>
+
