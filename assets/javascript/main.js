@@ -8,10 +8,20 @@
         // API Secret
         // 6b039100bb70ef9174e7233692373ca0
          
-        // var zipcode = "location=75035";
+       
         $(document).ready(function () {
-            var url =
-                'http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=75035&output=full&format=json';
+            var zipcode = "";
+            var url = ("http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=" + zipcode + "&output=full&format=json");
+          
+            // $( "sumit" ).click(function( event ) {
+            //     console.log("clicked");
+            //     $("#zipcode").push(zipcode);
+            // }
+           
+
+                //'http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=75035&output=full&format=json';
+
+
             $.ajax({
                 type: "GET",
                 data: {},
@@ -56,3 +66,19 @@
         });
 
 
+                //Firebase connection 
+                var config = {
+                    //young API KEY
+                  //apiKey: "AIzaSyC1yYMNVs-rkVP040Su6ZwFSDVCXLZwC5I",
+                  apiKey: "AIzaSyC1yYMNVs-rkVP040Su6ZwFSDVCXLZwC5I",
+                  authDomain: "firstproject-c32a7.firebaseapp.com",
+                  databaseURL: "https://firstproject-c32a7.firebaseio.com",
+                  projectId: "firstproject-c32a7",
+                  storageBucket: "firstproject-c32a7.appspot.com",
+                  messagingSenderId: "1089648735509"
+                };
+                firebase.initializeApp(config);
+      
+                var database = firebase.database();
+                console.log(database);
+      
