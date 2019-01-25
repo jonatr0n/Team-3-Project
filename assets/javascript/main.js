@@ -63,21 +63,19 @@
                     alert("Request: " + JSON.stringify(request));
                 }
             });
-        });
+        });``
 
 
                 //Firebase connection 
                 var config = {
-                    //young API KEY
-                  //apiKey: "AIzaSyC1yYMNVs-rkVP040Su6ZwFSDVCXLZwC5I",
-                  apiKey: "AIzaSyC1yYMNVs-rkVP040Su6ZwFSDVCXLZwC5I",
-                  authDomain: "firstproject-c32a7.firebaseapp.com",
-                  databaseURL: "https://firstproject-c32a7.firebaseio.com",
-                  projectId: "firstproject-c32a7",
-                  storageBucket: "firstproject-c32a7.appspot.com",
-                  messagingSenderId: "1089648735509"
-                };
-                firebase.initializeApp(config);
+                    apiKey: "AIzaSyCMZTfU_JsxH2_4e3WbjjEjagfOvNV3EHc",
+                    authDomain: "team-3-project-1548374565657.firebaseapp.com",
+                    databaseURL: "https://team-3-project-1548374565657.firebaseio.com",
+                    projectId: "team-3-project-1548374565657",
+                    storageBucket: "team-3-project-1548374565657.appspot.com",
+                    messagingSenderId: "1073244498652"
+                  };
+                  firebase.initializeApp(config);
       
                 var database = firebase.database();
                 console.log(database);
