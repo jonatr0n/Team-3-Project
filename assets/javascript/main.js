@@ -12,10 +12,16 @@
         $(document).ready(function () {
             var zipcode = "";
             var url = ("http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=" + zipcode + "&output=full&format=json");
-           $("#zipcode").push(zipcode);
+          
+            // $( "sumit" ).click(function( event ) {
+            //     console.log("clicked");
+            //     $("#zipcode").push(zipcode);
+            // }
+           
 
-            // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + mmaFighter + "&api_key=dc6zaTOxFJmzC&limit=10";
                 //'http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=75035&output=full&format=json';
+
+
             $.ajax({
                 type: "GET",
                 data: {},
