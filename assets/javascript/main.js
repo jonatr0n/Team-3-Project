@@ -1,5 +1,6 @@
 
 
+
 //** phase 1 - PetFinder API:"http://api.petfinder.com/pet" and Using GET-Ajax 
 
 // young API Key - PetFinder
@@ -78,3 +79,4 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 console.log(database);
+
