@@ -1,5 +1,6 @@
 
 $("#SubmitButton").on("click", function (event) {
+
     event.preventDefault();
 
     var zip = $("#zipcode").val().trim();
