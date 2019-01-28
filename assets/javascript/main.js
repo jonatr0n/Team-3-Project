@@ -1,3 +1,4 @@
+
 $("#SubmitButton").on("click", function (event) {
 
 
@@ -9,6 +10,31 @@ $("#SubmitButton").on("click", function (event) {
     $("#map").attr("src", "https://www.google.com/maps/embed/v1/place?q=animal%20shelter%20"+zip+"&key=AIzaSyCbj3jXpi6I_ufHHhKwvq0xTB8VpzK1g6I")
 
     var url = ("http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=" + zip + "&output=full&format=json");
+
+
+
+
+//** phase 1 - PetFinder API:"http://api.petfinder.com/pet" and Using GET-Ajax 
+
+// young API Key - PetFinder
+// e1f0be0034d8cc774bc8b9da4206ab27
+// API Secret
+// 6b039100bb70ef9174e7233692373ca0
+
+
+$(document).ready(function () {
+    var zipcode = "";
+    var url = ("http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=" + zipcode + "&output=full&format=json");
+
+    // $( "sumit" ).click(function( event ) {
+    //     console.log("clicked");
+    //     $("#zipcode").push(zipcode);
+    // }
+
+
+    //'http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=75035&output=full&format=json';
+
+
 
     $.ajax({
         type: "GET",
@@ -26,7 +52,10 @@ $("#SubmitButton").on("click", function (event) {
             infoHTML += "<strong>ZipCode</strong><br>";
             //add photo to ZipCode
             infoHTML += petfinder.pet.contact.zip["$t"];
+
             // console.log(infoHTML);
+
+
 
             infoHTML += "<li>";
             infoHTML += "<strong>ShelterID</strong><br>";
@@ -41,8 +70,10 @@ $("#SubmitButton").on("click", function (event) {
 
             infoHTML += "</ul>";
             // return info HTML to #petfinderInfo ;
+
             // console.log(petfinder);
             // console.log(infoHTML);
+
             $("#petfinderInfo").html(infoHTML);
         },
 
@@ -51,7 +82,10 @@ $("#SubmitButton").on("click", function (event) {
             alert("Request: " + JSON.stringify(request));
         }
     });
+
 })
+
+
 
 
 //Firebase connection 
@@ -67,3 +101,4 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 console.log(database);
+
