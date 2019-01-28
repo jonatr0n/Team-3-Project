@@ -2,33 +2,33 @@
 <html lang="en">
 
 <head>
-    <title>Group 3</title>
+    <title>Pawder!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
 </head>
 
 <body>
 
-
     <!-- //this is the Jumbotron -->
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1>Welcome </h1>
-                <h2> Got Pet?</h2>
-
-                <p>This will be our Mission Statement </p>
-            </div>
+            <h1>Pawder </h1>
+            <p>Finding a best friend is hard work. No more driving from one shelter to another, wasting gas, only to
+                get there and find that they're closed. Pawder aims to make it easier than ever!</p>
+            <p>Put in your zip, scroll through local potential best friends, call!</p>
         </div>
     </div>
 
-
+    <br>
 
     <!-- //This is the input form for zipcode -->
     <div class="container">
@@ -41,7 +41,7 @@
             </div>
 
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="SubmitButton">Submit</button>
         </form>
     </div>
     <br>
@@ -49,6 +49,8 @@
 
     <!-- //This is the type of pet (argument = animal) -->
     <div class="container">
+        <h2> Potential Best Friend</h2>
+
         <form>
             <select name="animal" class="custom-select">
                 <option selected>Type of animal</option>
@@ -57,14 +59,41 @@
                 <option value="Bird">Bird</option>
             </select>
         </form>
-   <br>
 
-    <!-- //**TEMPORARILY**// show PetFinder Ajax -->
-    <div id="petfinderInfo">hello</div>
+        <br>
 
+        <!-- //**TEMPORARILY**// show PetFinder Ajax -->
+        <div id="petfinderInfo">hello</div>
+    </div>
+</body>
+
+<br>
+
+<!-- google maps -->
+<div class="container">
+    <iframe width="600" height="450" frameborder="0" style="border:0" src=""
+    id="map"    allowfullscreen></iframe>
 </div>
 
-</body>
+<br>
+
+<!-- footer -->
+<footer>
+    <div id="footer">
+        <p> Team 3</p>
+    </div>
+</footer>
+
+
+
+<!-- <script>
+
+    //var zipCodeUserInput
+
+</script> -->
+<!-- </body>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbj3jXpi6I_ufHHhKwvq0xTB8VpzK1g6I&libraries=places"></script> -->
+<!-- Main JavaScript Reference -->
 <script type="text/javascript" src="assets/javascript/main.js"></script>
 
 </html>
