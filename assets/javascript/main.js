@@ -1,4 +1,17 @@
 
+$("#SubmitButton").on("click", function (event) {
+
+
+    event.preventDefault();
+
+    var zip = $("#zipcode").val().trim();
+    console.log(zip);
+
+    $("#map").attr("src", "https://www.google.com/maps/embed/v1/place?q=animal%20shelter%20"+zip+"&key=AIzaSyCbj3jXpi6I_ufHHhKwvq0xTB8VpzK1g6I")
+
+    var url = ("http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=" + zip + "&output=full&format=json");
+
+
 
 
 //** phase 1 - PetFinder API:"http://api.petfinder.com/pet" and Using GET-Ajax 
@@ -22,6 +35,7 @@ $(document).ready(function () {
     //'http://api.petfinder.com/pet.getRandom?key=e1f0be0034d8cc774bc8b9da4206ab27&location=75035&output=full&format=json';
 
 
+
     $.ajax({
         type: "GET",
         data: {},
@@ -38,7 +52,10 @@ $(document).ready(function () {
             infoHTML += "<strong>ZipCode</strong><br>";
             //add photo to ZipCode
             infoHTML += petfinder.pet.contact.zip["$t"];
-            console.log(infoHTML);
+
+            // console.log(infoHTML);
+
+
 
             infoHTML += "<li>";
             infoHTML += "<strong>ShelterID</strong><br>";
@@ -53,8 +70,10 @@ $(document).ready(function () {
 
             infoHTML += "</ul>";
             // return info HTML to #petfinderInfo ;
-            console.log(petfinder);
-            console.log(infoHTML);
+
+            // console.log(petfinder);
+            // console.log(infoHTML);
+
             $("#petfinderInfo").html(infoHTML);
         },
 
@@ -63,7 +82,10 @@ $(document).ready(function () {
             alert("Request: " + JSON.stringify(request));
         }
     });
-}); ``
+
+})
+
+
 
 
 //Firebase connection 
