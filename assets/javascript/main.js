@@ -7,17 +7,10 @@ $("#SubmitButton").on("click", function (event) {
 
     $("#map").attr("src", "https://www.google.com/maps/embed/v1/place?q=animal%20shelter%20" + zip + "&key=AIzaSyCbj3jXpi6I_ufHHhKwvq0xTB8VpzK1g6I")
 
-    //** phase 1 - PetFinder API:"http://api.petfinder.com/pet" and Using GET-Ajax 
+    var url = ("http://api.petfinder.com/pet.find?key=e1f0be0034d8cc774bc8b9da4206ab27&location=" + zip + "&output=full&format=json");
 
-    // young API Key - PetFinder
-    // e1f0be0034d8cc774bc8b9da4206ab27
-    // API Secret
-    // 6b039100bb70ef9174e7233692373ca0
-
-        var url = ("http://api.petfinder.com/pet.find?key=e1f0be0034d8cc774bc8b9da4206ab27&location=" + zip + "&output=full&format=json");
-
-        console.log(url);
-        $(document).ready(function () {
+    //console.log(url);
+    $(document).ready(function () {
 
         $.ajax({
             type: "GET",
@@ -57,20 +50,5 @@ $("#SubmitButton").on("click", function (event) {
                 alert("Request: " + JSON.stringify(request));
             }
         });
- })
-
-    //Firebase connection 
-    var config = {
-        apiKey: "AIzaSyCMZTfU_JsxH2_4e3WbjjEjagfOvNV3EHc",
-        authDomain: "team-3-project-1548374565657.firebaseapp.com",
-        databaseURL: "https://team-3-project-1548374565657.firebaseio.com",
-        projectId: "team-3-project-1548374565657",
-        storageBucket: "team-3-project-1548374565657.appspot.com",
-        messagingSenderId: "1073244498652"
-    };
-    firebase.initializeApp(config);
-
-    var database = firebase.database();
-    console.log(database);
-
+    })
 })
