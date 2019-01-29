@@ -61,9 +61,20 @@ $("#SubmitButton").on("click", function (event) {
                 $(document).ready(function () {
                     $("#petfinderInfo").lightSlider({
                         item: 3,
-                        autoWidth: false,
+                        autoWidth: true,
+                        loop: true,
+                        onSliderLoad: function(){
+                            $('#autoWidth').removeClass('cS-hidden');
+                        },
+                        
                         slideMove: 1, // slidemove will be 1 if loop is true
                         slideMargin: 10,
+
+
+        //                 autoWidth:true,
+        // loop:true,
+        // onSliderLoad: function() {
+        //     $('#autoWidth').removeClass('cS-hidden');
                 
                         addClass: '',
                         mode: "slide",
