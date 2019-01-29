@@ -1,45 +1,19 @@
-<<<<<<< ivan
 .container {
     border: 1px black solid;
     background-color: rgb(221, 216, 216);
     padding: 10px;
     text-align: left;
 }
-
 body {
-    background-image: url("../images/43y3hub4k1nh321.png");
+    background: linear-gradient(0, #5b5974, transparent), url("../images/43y3hub4k1nh321.png");
     font-family: 'Baloo Thambi', cursive;
 }
-
 .jumbotron {
     background-color: rgb(221, 216, 216);
+    text-align: center;
 }
-
 footer {
     background-color: black;
     color: white;
     text-align: center;
 }
-=======
-.container {
-    border: 1px black solid;
-    background-color: rgb(221, 216, 216);
-    padding: 10px;
-    text-align: left;
-}
-
-body {
-    background-image: url("../images/43y3hub4k1nh321.png");
-    font-family: 'Baloo Thambi', cursive;
-}
-
-.jumbotron {
-    background-color: rgb(221, 216, 216);
-}
-
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-}
->>>>>>> master

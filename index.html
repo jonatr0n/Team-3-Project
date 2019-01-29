@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>l;
 
 </head>
 
@@ -25,6 +25,9 @@
             <p>Finding a best friend is hard work. No more driving from one shelter to another, wasting gas, only to
                 get there and find that they're closed. Pawder aims to make it easier than ever!</p>
             <p>Put in your zip, scroll through local potential best friends, call!</p>
+            <div class="gif">
+                <img src="assets/images/200w.webp">
+            </div>
         </div>
     </div>
 
@@ -33,7 +36,7 @@
     <!-- //This is the input form for zipcode -->
     <div class="container">
         <h2>Location</h2>
-        <form action="/action_page.php">
+        <!-- <form action="/action_page.php"> -->
 
             <div class="form-group">
                 <label for="zipcode">zipcode:</label>
@@ -41,8 +44,10 @@
             </div>
 
 
+        <!-- </form> -->
             <button type="submit" class="btn btn-primary" id="SubmitButton">Submit</button>
         </form>
+
     </div>
     <br>
 
@@ -71,7 +76,9 @@
 
 <!-- google maps -->
 <div class="container">
-    <iframe width="600" height="450" frameborder="0" style="border:0" src="" id="map" allowfullscreen></iframe>
+
+    <div class="container">
+        <iframe width="600" height="450" frameborder="0" style="border:0" src="" id="map" allowfullscreen></iframe>
 
 
 <br>
@@ -105,5 +112,6 @@
 
 <!-- Main JavaScript Reference -->
 <script type="text/javascript" src="assets/javascript/main.js"></script>
+<script type="text/javascript" src="assets/javascript/firebase.js"></script>
 
 </html>
