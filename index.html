@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body> 
 
     <!-- //this is the Jumbotron -->
     <div class="container">
@@ -39,9 +39,19 @@
 
     <!-- //This is the input form for zipcode -->
     <div class="container">
+        <h2>Type</h2>
+        <form>
+            <select name="animal" class="custom-select" id="animal">
+                <option selected>Type of animal</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="bird">Bird</option>
+            </select>
+        </form>
+        <br>
+
         <h2>Location</h2>
         <!-- <form action="/action_page.php"> -->
-
             <div class="form-group">
                 <label for="zipcode">zipcode:</label>
                 <input type="zipcode" class="form-control" id="zipcode" placeholder="Enter zipcode" name="zipcode">
@@ -57,22 +67,17 @@
 
 
     <!-- //This is the type of pet (argument = animal) -->
-    <div class="container">
+    <div class="container" id="petContainer">
         <h2> Potential Best Friend</h2>
-
-        <form>
-            <select name="animal" class="custom-select" id="animal">
-                <option selected>Type of animal</option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="bird">Bird</option>
-            </select>
-        </form>
-
         <br>
-
         <!-- //**TEMPORARILY**// show PetFinder Ajax -->
         <div id="petfinderInfo">hello</div>
+    </div>
+    <div class="container">
+        <h2>Description</h2>
+        <br>
+        <!-- //**TEMPORARILY**// show PetFinder Ajax -->
+        <div id="petfinderInfo1">hello</div>
     </div>
 </body>
 

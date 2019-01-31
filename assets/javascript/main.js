@@ -13,7 +13,7 @@ $("#SubmitButton").on("click", function (event) {
     $("#map").attr("src", "https://www.google.com/maps/embed/v1/place?q=animal%20shelter%20" + zip + "&key=AIzaSyCbj3jXpi6I_ufHHhKwvq0xTB8VpzK1g6I");
 
     //API for PETFINDER
-    var url = ("http://api.petfinder.com/pet.find?key=e1f0be0034d8cc774bc8b9da4206ab27&location=" + zip + "&animal=" +animal+ "&output=full&format=json");
+    var url = ("https://api.petfinder.com/pet.find?key=e1f0be0034d8cc774bc8b9da4206ab27&location=" + zip + "&animal=" +animal+ "&output=full&format=json");
 
     console.log(url);
     $(document).ready(function () {
@@ -36,26 +36,42 @@ $("#SubmitButton").on("click", function (event) {
                     console.log("petfinder.length: "  + petfinder[i].length);
 
                     console.log("I: " + [i]);
-                    var infoHTML = "<ul>";
+                    var infoHTMLPic = "<ul>";
+                    var infoHTMLDesc = "<ul>";
 
-                    infoHTML += "<li>";
-                    infoHTML += "<strong>ZipCode</strong><br>";
-                    //add photo to ZipCode
-                    infoHTML += petfinder[i].contact.zip["$t"];
-                    //console.log(infoHTML);
-                    infoHTML += "<li>";
-                    infoHTML += "<strong>ShelterID</strong><br>";
+                    //infoHTMLPic += "<li>";
+                    //add img-# class to all images 
+                    infoHTMLDesc += petfinder[i].breeds.breed["$t"];
+                    //infoHTMLPic += "<strong>pic</strong><br>";
+                    infoHTMLPic += "<img id='petPics' class='img-"+ [i] +"' src=";
+
+                    infoHTMLPic += petfinder[i].media.photos.photo[2].$t
+                    infoHTMLPic += '</li>';
+                    infoHTMLPic += "</ul>";
+                    
+                    
+                    infoHTMLDesc += '<br><br><strong>ZipCode</strong><br>';
+                    infoHTMLDesc += petfinder[i].contact.zip["$t"];
+                    
+                    //infoHTMLDesc += "<li>";
+                    infoHTMLDesc += "<br><strong>ShelterID</strong><br>";
+                    
                     //add ShelterID to li
-                    infoHTML += petfinder[i].shelterId["$t"];
-                    infoHTML += "<li>";
-                    infoHTML += '<strong>pic</strong><br><img src="';
+                   // infoHTMLDesc += "<li>";
+                    infoHTMLDesc += petfinder[i].shelterId["$t"];
+                    
+                    
+                    //infoHTMLPic += '<strong>pic</strong><br><img src="';
+                    
                     //add photo to li and ["2"] = X-large picture
-                    infoHTML += petfinder[i].media.photos.photo[2].$t
-                    infoHTML += '"</li>';
-                    infoHTML += "</ul>";
+                    //infoHTMLPic += petfinder[i].media.photos.photo[2].$t
+                    
+                    infoHTMLDesc += '</li>';
+                    infoHTMLDesc += "</ul>";
                     // return info HTML to #petfinderInfo ;
     
-                    $("#petfinderInfo").prepend(infoHTML);
+                    $("#petfinderInfo").append(infoHTMLPic,infoHTMLDesc);
+                    //$("#petfinderInfo1").append(infoHTMLDesc);
                     
                 }
                 $(document).ready(function () {
@@ -132,3 +148,33 @@ $("#SubmitButton").on("click", function (event) {
         });
     })
 })
+
+
+// Geolocation
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+        var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        };
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Location found.');
+        infoWindow.open(map);
+        map.setCenter(pos);
+    }, function () {
+        handleLocationError(true, infoWindow, map.getCenter());
+    });
+} else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+}
+
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation.');
+    infoWindow.open(map);
+}

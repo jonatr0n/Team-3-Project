@@ -157,7 +157,7 @@
     display: block;
     top: 50%;
     height: 32px;
-    background-image: url('../img/controls.png');
+    background-image: url('../images/controls.png');
     cursor: pointer;
     position: absolute;
     z-index: 99;
@@ -184,7 +184,7 @@
     height: 1px;
     opacity: 0;
     filter: alpha(opacity=0);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -392,4 +392,14 @@
   cursor: -o-grabbing;
   cursor: -ms-grabbing;
   cursor: grabbing;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 16%;
+}
+
+.lSNext {
+color: black;
 }
