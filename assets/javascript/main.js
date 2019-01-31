@@ -87,10 +87,7 @@ $("#SubmitButton").on("click", function (event) {
                         slideMargin: 10,
 
 
-        //                 autoWidth:true,
-        // loop:true,
-        // onSliderLoad: function() {
-        //     $('#autoWidth').removeClass('cS-hidden');
+      
                 
                         addClass: '',
                         mode: "slide",
@@ -100,11 +97,11 @@ $("#SubmitButton").on("click", function (event) {
                 
                         speed: 400, //ms'
                         auto: false,
-                        loop: false,
+                        loop: true, //loops through animals if you reach the end
                         slideEndAnimation: true,
                         pause: 2000,
                 
-                        keyPress: false,
+                        keyPress: true,
                         controls: true,
                         prevHtml: '',
                         nextHtml: '',
