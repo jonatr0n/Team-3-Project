@@ -11,19 +11,27 @@ body {
 .jumbotron {
     background-color: rgb(221, 216, 216);
     text-align: center;
+    height: 375px;
 }
 footer {
     background-color: black;
     color: white;
     text-align: center;
 }
-
-#petPics{
+#petPics {
     width: 75%;
 }
 
 
-#petContainer{
+#petContainer {
     height: 50%;
 
 }
+
+.picture-container {
+    border: 1px black solid;
+    background-color: rgb(221, 216, 216);
+    padding: 10px;
+    text-align: center;
+}
+
