@@ -85,6 +85,28 @@
         <!-- //**TEMPORARILY**// show PetFinder Ajax -->
         <div id="petfinderInfo1"></div>
     </div>
+    <button class="open-button" onclick="openForm()">Contact Us <br> for adoption info</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Contact </h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="First / Last name" name="user" required>
+
+    <label for="tel"><b>Phone</b></label>
+    <input type="tel" placeholder="Phone" name="tel" required>
+
+    <label for="psw"><b>Animal ID</b></label>
+    <input type="string" placeholder="Animal ID" name="psw" required>
+
+    <button type="contact" class="btn">contact</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
 </body>
 <br>
 
