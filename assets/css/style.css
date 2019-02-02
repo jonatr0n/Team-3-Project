@@ -36,7 +36,6 @@ footer {
 }
 
 #petContainer {
-    padding: 70px;
     background-size: 96%;
     height: 100%;
 }
@@ -59,6 +58,7 @@ footer {
 .container .Container1 {
     border: black;
 }
+
 /* //Style for contact button */
 .open-button {
     background-color: #555;
@@ -126,3 +126,12 @@ footer {
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
   }
+
+
+.desc { 
+    background: rgb(245, 242, 242);
+    border: solid 1px black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
