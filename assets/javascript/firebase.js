@@ -47,5 +47,4 @@ database.ref().on("value", function (snapshot) {
     // Handle the errors
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
-});
-
+})

@@ -40,44 +40,26 @@ $("#SubmitButton").on("click", function (event) {
                     //console.log("petfinder.length: "  + petfinder[i].length);
 
                     console.log(petfinder);
+
                     var infoHTMLPic = "<ol>";
                     var infoHTMLDesc = "<ol style='display:none' id='funfun_" + [i] + "' class='desc'>";
-                    infoHTMLDesc += "<img id='petPics' class='img-" + [i] + "'>";
 
-                    //infoHTMLPic += "<li>";
-                    //add img-# class to all images 
-                    infoHTMLDesc += petfinder[i].breeds.breed["$t"];
-                    //infoHTMLPic += "<strong>pic</strong><br>";
-
-                    //hover pic to this 
                     infoHTMLPic += "<div class='container1' style='height:50px width:50px center' >";
                     infoHTMLPic += "<img id='petPics_" + [i] + "' alt='Avatar' class='image img-" + [i] + "' src='" + petfinder[i].media.photos.photo[2].$t + "' >";
-                    infoHTMLPic += '<div class="overlay"><div class="text">Hello World</div></div>';
-
-
+                    infoHTMLPic += '<div class="overlay"><div class="text">I Need a Home.</div></div>';
                     infoHTMLPic += "</div>";
 
+
+                    infoHTMLDesc += "<img id='petPics' class='img-" + [i] + "'>";
+                    infoHTMLDesc += "<img id='petDesc'  class='img-" + [i] + "' src='" + petfinder[i].media.photos.photo[2].$t + "' ><br>";
+                    infoHTMLDesc += petfinder[i].breeds.breed["$t"];
                     infoHTMLDesc += '<br><strong>ZipCode</strong><br>';
                     infoHTMLDesc += petfinder[i].contact.zip["$t"];
-
-                    //infoHTMLDesc += "<li>";
                     infoHTMLDesc += "<br><strong>ShelterID</strong><br>";
-
-                    //add ShelterID to li
-                    // infoHTMLDesc += "<li>";
                     infoHTMLDesc += petfinder[i].shelterId["$t"];
-
-
-                    //infoHTMLPic += '<strong>pic</strong><br><img src="';
-
-                    //add photo to li and ["2"] = X-large picture
                     infoHTMLDesc += petfinder[i].description["$t"];
-
                     infoHTMLDesc += '</li>';
                     infoHTMLDesc += "</ol>";
-
-                    //petfinder.[i].description
-                    // return info HTML to #petfinderInfo ;
 
                     $("#petfinderInfo").append(infoHTMLPic);
                     $("#petfinderInfo1").append(infoHTMLDesc);
@@ -86,18 +68,11 @@ $("#SubmitButton").on("click", function (event) {
                     // '<div class="overlay"><div class="text">Hello World</div></div>'
 
                 }
-
-
-
+                //slider 
                 $(document).ready(function () {
                     $("#petfinderInfo").lightSlider({
                         item: 3,
-                        autoWidth: true,
-                        loop: true,
-                        onSliderLoad: function(){
-                            $('#autoWidth').removeClass('cS-hidden');
-                        },
-                        
+                        autoWidth: false, //false
                         slideMove: 1, // slidemove will be 1 if loop is true
                         slideMargin: 10,
 

@@ -35,3 +35,27 @@ footer {
     text-align: center;
 }
 
+#petContainer {
+    padding: 70px;
+    background-size: 96%;
+    height: 100%;
+}
+
+#petfinderInfo{
+    margin-left: 5%;
+    width: 8444px; 
+    /* height for hover */
+    height: 260px!important; 
+    padding-bottom: 0%; 
+    transform: translate3d(-4368px, 0px, 0px);
+
+}
+
+#petDesc{
+    overflow: hidden;
+}
+
+
+.container .Container1 {
+    border: black;
+}
