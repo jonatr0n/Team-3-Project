@@ -24,7 +24,7 @@
     margin: 0;
 }
 .lSSlideWrapper {
-    height: 160px;
+    height: 260px;
     max-width: 99%;
     overflow: initial;
     position: relative;
@@ -80,7 +80,7 @@
 /* Pager */
 .lSSlideOuter .lSPager.lSpg {
     margin: 10px 0 0;
-    padding: 0;
+    padding: 24;
     text-align: center;
 }
 .lSSlideOuter .lSPager.lSpg > li {
