@@ -7,7 +7,7 @@ var config = {
     projectId: "petstuff-67506",
     storageBucket: "petstuff-67506.appspot.com",
     messagingSenderId: "602855780278"
-};
+  };
 firebase.initializeApp(config);
 
 var database = firebase.database();
@@ -17,6 +17,11 @@ console.log("Firebase Called");
 var database = firebase.database();
 var clickCounter = 0;
 var userZip = "";
+var contactName ="";
+var contactEmail ="";
+var contactPhone ="";
+var animalId = "";
+
 
 // // Capture Button on click
 $("#SubmitButton").on("click", function (event) {
@@ -24,16 +29,45 @@ $("#SubmitButton").on("click", function (event) {
     event.preventDefault();
     clickCounter++;
 
+
+   
+   
+
     //grabs the user input zipcode 
     userZip = $("#zipcode").val().trim();
+   
 
     //logs it in the database
-    database.ref().set({
+    database.ref('/zip').push({
         userZip: userZip,
         clickCount: clickCounter,
+        
 
     });
 });
+
+ //capture contact button on click
+ $("#contactButton").on("click", function (event) {
+    // // Don't refresh the page!
+    event.preventDefault();
+    console.log("contact button press");
+
+    contactName = $("#userName").val().trim();
+    contactEmail = $("#email").val().trim();
+    contactPhone = $("#phone").val().trim();
+    animalId = $("#animalId").val().trim();
+
+    //logs it in the database
+    database.ref(`/contact/${contactName}`).push({
+
+    contactName: contactName,
+    contactEmail: contactEmail,
+    contactPhone:contactPhone,
+    animalId:animalId,
+    })
+ })
+
+
 console.log(userZip);
 database.ref().on("value", function (snapshot) {
 
@@ -48,3 +82,4 @@ database.ref().on("value", function (snapshot) {
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
 })
+
