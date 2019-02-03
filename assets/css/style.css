@@ -23,10 +23,10 @@ footer {
 }
 
 
-#petContainer {
+/* #petContainer {
     height: 50%;
 
-}
+} */
 
 .picture-container {
     border: 1px black solid;
@@ -41,11 +41,14 @@ footer {
 }
 
 #petfinderInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 5%;
-    width: 8444px; 
+    width: 8444px;
     /* height for hover */
-    height: 260px!important; 
-    padding-bottom: 0%; 
+    height: 260px!important;
+    padding-bottom: 0%;
     transform: translate3d(-4368px, 0px, 0px);
 
 }
