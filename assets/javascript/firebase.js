@@ -38,7 +38,7 @@ $("#SubmitButton").on("click", function (event) {
    
 
     //logs it in the database
-    database.ref().set({
+    database.ref('/zip').push({
         userZip: userZip,
         clickCount: clickCounter,
         
