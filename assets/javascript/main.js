@@ -50,7 +50,7 @@ $("#SubmitButton").on("click", function (event) {
                     console.log(petfinder);
 
                     var infoHTMLPic = "<ol>";
-                    var infoHTMLDesc = "<ol style='display:none' id='funfun_" + [i] + "' class='desc'>";
+                    var infoHTMLDesc = "<ol style='display:none' id='petDesc_" + [i] + "' class='desc'>";
 
                     infoHTMLPic += "<div class='container1' style='height:50px width:50px center' >";
                     infoHTMLPic += "<img id='petPics_" + [i] + "' alt='Avatar' class='image img-" + [i] + "' src='" + petfinder[i].media.photos.photo[2].$t + "' >";
@@ -70,14 +70,18 @@ $("#SubmitButton").on("click", function (event) {
                     infoHTMLDesc += petfinder[i].shelterId["$t"]+"<br>";
                     infoHTMLDesc += "<br><strong>Email</strong><br>";
                     infoHTMLDesc += petfinder[i].contact.email["$t"]+"<br><br>";
-                    infoHTMLDesc += petfinder[i].description["$t"];
+                    infoHTMLDesc += "<p>"+ petfinder[i].description["$t"]+"</p>";
                     infoHTMLDesc += '</li>';
                     infoHTMLDesc += "</ol>";
 
                     $("#petfinderInfo").append(infoHTMLPic);
                     $("#petfinderInfo1").append(infoHTMLDesc);
+                    $("#IDAddIn").val(petfinder[i].id["$t"]);
 
 
+
+
+                    
                     // '<div class="overlay"><div class="text">Hello World</div></div>'
 
                 }
@@ -162,7 +166,7 @@ $("#SubmitButton").on("click", function (event) {
             var slicedId = sourceElementId.split("_")[1];
 
             // find the corresponding description
-            var targetElementId = "#funfun_" + slicedId;
+            var targetElementId = "#petDesc_" + slicedId;
             $(targetElementId).show();
             console.log("Clicked!");
 
