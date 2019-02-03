@@ -60,11 +60,16 @@ $("#SubmitButton").on("click", function (event) {
 
                     infoHTMLDesc += "<img id='petPics' class='img-" + [i] + "'>";
                     infoHTMLDesc += "<img id='petDesc'  class='img-" + [i] + "' src='" + petfinder[i].media.photos.photo[2].$t + "' ><br>";
-                    infoHTMLDesc += petfinder[i].breeds.breed["$t"];
+                    infoHTMLDesc += "<br><strong>Pet ID</strong><br>";
+                    infoHTMLDesc += petfinder[i].id["$t"]+"<br>";
+                    infoHTMLDesc += "<br><strong>Breed</strong><br>";
+                    infoHTMLDesc += petfinder[i].breeds.breed["$t"]+"<br>";
                     infoHTMLDesc += '<br><strong>ZipCode</strong><br>';
-                    infoHTMLDesc += petfinder[i].contact.zip["$t"];
+                    infoHTMLDesc += petfinder[i].contact.zip["$t"]+"<br>";
                     infoHTMLDesc += "<br><strong>ShelterID</strong><br>";
-                    infoHTMLDesc += petfinder[i].shelterId["$t"];
+                    infoHTMLDesc += petfinder[i].shelterId["$t"]+"<br>";
+                    infoHTMLDesc += "<br><strong>Email</strong><br>";
+                    infoHTMLDesc += petfinder[i].contact.email["$t"]+"<br><br>";
                     infoHTMLDesc += petfinder[i].description["$t"];
                     infoHTMLDesc += '</li>';
                     infoHTMLDesc += "</ol>";
@@ -193,6 +198,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
-function clearBox(elementID) {
-    document.getElementById(elementID).innerHTML = "";
-}
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
