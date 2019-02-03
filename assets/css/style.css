@@ -3,6 +3,7 @@
     background-color: rgb(221, 216, 216);
     padding: 10px;
     text-align: left;
+    border-radius: 15px;
 }
 body {
     background: linear-gradient(0, #5b5974, transparent), url("../images/43y3hub4k1nh321.png");
@@ -41,21 +42,37 @@ footer {
 }
 
 #petfinderInfo{
+    width: 839% !important;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 5%;
-    width: 8444px;
-    /* height for hover */
-    height: 260px!important;
-    padding-bottom: 0%;
-    transform: translate3d(-4368px, 0px, 0px);
-
+    /* width: 8444px; */
+    height: 357px!important;
+    padding-bottom: 10%!important;
 }
+
+
 
 #petDesc{
+    
+    margin-top: 12px;
+    margin-right: 36px;
+    /* padding-top: 0px; */
+    float: right;
+    /* display: block; */
+    width: 16%;
+    height: inherit;
+    border: solid 16px;
+    border-bottom-color: #ffe;
+    border-left-color: #eed;
+    border-right-color: rgb(177, 212, 199);
+    border-top-color: #505038;
+    /* max-height: 100%; */
+    /* max-width: 79%; */
     overflow: hidden;
-}
+  }
+
 
 
 .container .Container1 {
@@ -138,3 +155,20 @@ footer {
     padding-bottom: 10px;
 }
 
+
+
+
+
+/* testing */
+.image {
+    width: -webkit-fill-available;
+    display: block;
+    /* height: 45%; */
+    height: auto;
+    border: solid 10px;
+    border-bottom-color: #ffe;
+    border-left-color: #eed;
+    border-right-color: #eed;
+    border-top-color: #ccb;
+    /* max-height: 100%; */
+    /* max-width: 100%; */
