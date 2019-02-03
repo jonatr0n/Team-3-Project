@@ -2,6 +2,14 @@
 
 
 $("#SubmitButton").on("click", function (event) {
+    
+    // Empty & Clear all Id's
+    $("#petfinderInfo1").html("");
+    $('#petContainer').empty();
+    $("#petContainer").prepend('<div class="container" id="petContainer"><h2> Potential Best Friend</h2><br><div id="petfinderInfo"></div></div>');
+
+    // $("#petContainer").append('<div class="container" id="petContainer1"><h2> Potential Best Friend</h2><br><div id="petfinderInfo"></div></div>');
+
 
     event.preventDefault();
 
@@ -132,26 +140,28 @@ $("#SubmitButton").on("click", function (event) {
         });
     })
 
-});
 
-$(document).ready(function () {
-    $('#petfinderInfo').on('click', ".container1", function (e) {
 
-        // hide all the descriptions first
-        $('.desc').hide();
+    $(document).ready(function () {
+        $('#petfinderInfo').on('click', ".container1", function (e) {
 
-        if (!e.currentTarget.firstElementChild) return;
+            // hide all the descriptions first
+            $('.desc').hide();
+            console.log("desc Clicked!");
 
-        var sourceElementId = e.currentTarget.firstElementChild.id;
-        if (!sourceElementId) return;
+            if (!e.currentTarget.firstElementChild) return;
 
-        var slicedId = sourceElementId.split("_")[1];
+            var sourceElementId = e.currentTarget.firstElementChild.id;
+            if (!sourceElementId) return;
 
-        // find the corresponding description
-        var targetElementId = "#funfun_" + slicedId;
-        $(targetElementId).show();
-        console.log("Clicked!");
+            var slicedId = sourceElementId.split("_")[1];
 
+            // find the corresponding description
+            var targetElementId = "#funfun_" + slicedId;
+            $(targetElementId).show();
+            console.log("Clicked!");
+
+        });
     });
 });
 // Geolocation
@@ -181,4 +191,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
+}
+
+function clearBox(elementID) {
+    document.getElementById(elementID).innerHTML = "";
 }
