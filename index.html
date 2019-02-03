@@ -92,18 +92,22 @@
     <h1>Contact </h1>
 
     <label for="email"><b>Email</b></label>
+
     <input id="emailAddIn" type="text" placeholder="Enter Email" name="email" required>
 
+
     <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="First / Last name" name="user" required>
+    <input type="text" id="userName" placeholder="First / Last name" name="user" required>
 
     <label for="tel"><b>Phone</b></label>
-    <input type="tel" placeholder="Phone" name="tel" required>
+    <input type="tel" id="phone" placeholder="Phone" name="tel" required>
 
     <label for="psw"><b>Animal ID</b></label>
+
     <input id="IDAddIn" type="string"  placeholder="Animal ID" name="psw" required>
 
-    <button type="contact" class="btn">contact</button>
+
+    <button type="contact" class="btn" id="contactButton">contact</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
