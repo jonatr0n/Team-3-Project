@@ -182,3 +182,13 @@ footer {
     max-height: 100%;
     max-width: 100%;
 }
+
+/* twitter/Fb icons */
+.social {
+    position: absolute;
+    bottom:959px;
+    right: 450px;
+    
+    width: 5%;
+    float: right;
+}
