@@ -3,7 +3,7 @@
     background-color: rgb(221, 216, 216);
     padding: 10px;
     text-align: left;
-    border-radius: 15px;
+    overflow: auto;
 }
 body {
     background: linear-gradient(0, #5b5974, transparent), url("../images/43y3hub4k1nh321.png");
@@ -42,11 +42,11 @@ footer {
 }
 
 #petfinderInfo{
-    width: 839% !important;
+    width: 950% !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 5%;
+    margin-left: 0%;
     /* width: 8444px; */
     height: 357px!important;
     padding-bottom: 10%!important;
@@ -165,7 +165,7 @@ footer {
     display: block;
     /* height: 45%; */
     height: auto;
-    border: solid 10px;
+    border: solid 5px;
     border-bottom-color: #ffe;
     border-left-color: #eed;
     border-right-color: #eed;
