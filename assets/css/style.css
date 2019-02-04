@@ -3,6 +3,7 @@
     background-color: rgb(221, 216, 216);
     padding: 10px;
     text-align: left;
+    border-radius: 15px;
     overflow: auto;
 }
 body {
