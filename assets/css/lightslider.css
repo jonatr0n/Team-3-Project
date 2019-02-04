@@ -406,27 +406,6 @@ img {
 .lSNext {
 color: black;
 }
-
-
- /* hover pet img and desc shows up */
-.container1 {
-    position: relative;
-    width: 50%;
-  } 
-  
-  /* .image {
-    display: block;
-    width: 100%;
-    height: auto;
-    border:solid 16px;
-    border-bottom-color:#ffe;
-    border-left-color:#eed;
-    border-right-color:#eed;
-    border-top-color:#ccb;
-    max-height:100%;
-    max-width:100%;
-  } */
-  
   .overlay {
     position: absolute;
     top: 0;
@@ -434,14 +413,18 @@ color: black;
     left: 0;
     right: 0;
     height: auto;
-    width: 100%;
+    width: auto;
     opacity: 0;
     transition: .5s ease;
     background-color: #008CBA;
   }
-  
+   /* hover pet img and desc shows up */
+.container1 {
+    position: relative;
+    width: 100%;
+  } 
   .container1:hover .overlay {
-    opacity: 1;
+    opacity: .5;
   }
   
   .text {

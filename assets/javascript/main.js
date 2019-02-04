@@ -90,7 +90,7 @@ $("#SubmitButton").on("click", function (event) {
                     $("#petfinderInfo").lightSlider({
                         item: 3,
                         autoWidth: false, //false
-                        slideMove: 1, // slidemove will be 1 if loop is true
+                        slideMove: 2, // slidemove will be 1 if loop is true
                         slideMargin: 10,
 
                         addClass: '',
