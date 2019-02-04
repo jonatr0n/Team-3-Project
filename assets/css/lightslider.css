@@ -414,7 +414,7 @@ color: black;
     width: 50%;
   } 
   
-  .image {
+  /* .image {
     display: block;
     width: 100%;
     height: auto;
@@ -425,7 +425,7 @@ color: black;
     border-top-color:#ccb;
     max-height:100%;
     max-width:100%;
-  }
+  } */
   
   .overlay {
     position: absolute;
