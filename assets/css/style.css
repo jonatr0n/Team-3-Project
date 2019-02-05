@@ -86,7 +86,6 @@ footer {
     border: black;
 }
 
-<<<<<<< HEAD
 /* //Style for contact button */
 .open-button {
     background-color: #555;
@@ -156,14 +155,11 @@ footer {
   }
 
 
-=======
->>>>>>> 04fa0882d682cfe0ae33fa23e6804523c9834e0d
 .desc { 
     background: rgb(245, 242, 242);
     border: solid 1px black;
     padding-top: 10px;
     padding-bottom: 10px;
-<<<<<<< HEAD
 }
 
 
@@ -195,6 +191,4 @@ footer {
     
     width: 5%;
     float: right;
-=======
->>>>>>> 04fa0882d682cfe0ae33fa23e6804523c9834e0d
 }
