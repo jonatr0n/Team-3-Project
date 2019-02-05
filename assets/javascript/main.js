@@ -70,11 +70,10 @@ $("#SubmitButton").on("click", function (event) {
                     infoHTMLDesc += petfinder[i].shelterId["$t"]+"<br>";
                     infoHTMLDesc += "<br><strong>Email</strong><br>";
                     infoHTMLDesc += petfinder[i].contact.email["$t"]+"<br><br>";
-<<<<<<< HEAD
+
                     infoHTMLDesc += "<p>"+ petfinder[i].description["$t"]+"</p>";
-=======
-                    infoHTMLDesc += petfinder[i].description["$t"];
->>>>>>> 04fa0882d682cfe0ae33fa23e6804523c9834e0d
+
+
                     infoHTMLDesc += '</li>';
                     infoHTMLDesc += "</ol>";
 
