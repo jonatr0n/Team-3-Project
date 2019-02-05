@@ -37,12 +37,8 @@ $("#SubmitButton").on("click", function (event) {
             url: url + "&callback=?",
             dataType: "json",
             success: function (data) {
-                // stores result
-                //var result = "";
 
                 var petfinder = data.petfinder.pets.pet;
-                //  var petfinder = data.petfinder.pets;
-
 
                 for (var i = 0; i < petfinder.length; i++) {
                     //console.log("petfinder.length: "  + petfinder[i].length);
@@ -56,7 +52,6 @@ $("#SubmitButton").on("click", function (event) {
                     infoHTMLPic += "<img id='petPics_" + [i] + "' alt='Avatar' class='image img-" + [i] + "' src='" + petfinder[i].media.photos.photo[2].$t + "' >";
                     infoHTMLPic += '<div class="overlay"><div class="text">I Need a Home.</div></div>';
                     infoHTMLPic += "</div>";
-
 
                     infoHTMLDesc += "<img id='petPics' class='img-" + [i] + "'>";
                     infoHTMLDesc += "<img id='petDesc'  class='img-" + [i] + "' src='" + petfinder[i].media.photos.photo[2].$t + "' ><br>";
@@ -73,20 +68,13 @@ $("#SubmitButton").on("click", function (event) {
 
                     infoHTMLDesc += "<p>"+ petfinder[i].description["$t"]+"</p>";
 
-
                     infoHTMLDesc += '</li>';
                     infoHTMLDesc += "</ol>";
 
                     $("#petfinderInfo").append(infoHTMLPic);
                     $("#petfinderInfo1").append(infoHTMLDesc);
                     $("#IDAddIn").val(petfinder[i].id["$t"]);
-
-
-
-
                     
-                    // '<div class="overlay"><div class="text">Hello World</div></div>'
-
                 }
                 //slider 
                 $(document).ready(function () {
@@ -95,45 +83,36 @@ $("#SubmitButton").on("click", function (event) {
                         autoWidth: false, //false
                         slideMove: 2, // slidemove will be 1 if loop is true
                         slideMargin: 10,
-
                         addClass: '',
                         mode: "slide",
                         useCSS: true,
                         cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
                         easing: 'linear', //'for jquery animation',////
-
                         speed: 400, //ms'
                         auto: false,
                         loop: false,
                         slideEndAnimation: true,
                         pause: 2000,
-
                         keyPress: false,
                         controls: true,
                         prevHtml: '',
                         nextHtml: '',
-
                         rtl: false,
                         adaptiveHeight: false,
-
                         vertical: false,
                         verticalHeight: 500,
                         vThumbWidth: 100,
-
                         thumbItem: 10,
                         pager: true,
                         gallery: false,
                         galleryMargin: 5,
                         thumbMargin: 5,
                         currentPagerPosition: 'middle',
-
                         enableTouch: true,
                         enableDrag: true,
                         freeMove: true,
                         swipeThreshold: 40,
-
                         responsive: [],
-
                         onBeforeStart: function (el) { },
                         onSliderLoad: function (el) { },
                         onBeforeSlide: function (el) { },
@@ -152,8 +131,6 @@ $("#SubmitButton").on("click", function (event) {
         });
     })
 
-
-
     $(document).ready(function () {
         $('#petfinderInfo').on('click', ".container1", function (e) {
 
@@ -162,17 +139,14 @@ $("#SubmitButton").on("click", function (event) {
             console.log("desc Clicked!");
 
             if (!e.currentTarget.firstElementChild) return;
-
             var sourceElementId = e.currentTarget.firstElementChild.id;
             if (!sourceElementId) return;
-
             var slicedId = sourceElementId.split("_")[1];
 
             // find the corresponding description
             var targetElementId = "#petDesc_" + slicedId;
             $(targetElementId).show();
             console.log("Clicked!");
-
         });
     });
 });
@@ -195,7 +169,6 @@ if (navigator.geolocation) {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
 }
-
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);

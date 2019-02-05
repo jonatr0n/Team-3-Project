@@ -1,24 +1,24 @@
 //Firebase connection 
 // Initialize Firebase
-// var config = {
-//     apiKey: "AIzaSyCOajArTLL111HDGYbETmCJi1s1CH6h4Gs",
-//     authDomain: "petstuff-67506.firebaseapp.com",
-//     databaseURL: "https://petstuff-67506.firebaseio.com",
-//     projectId: "petstuff-67506",
-//     storageBucket: "petstuff-67506.appspot.com",
-//     messagingSenderId: "602855780278"
-// };
-//Young FireBase
 var config = {
+    apiKey: "AIzaSyCOajArTLL111HDGYbETmCJi1s1CH6h4Gs",
+    authDomain: "petstuff-67506.firebaseapp.com",
+    databaseURL: "https://petstuff-67506.firebaseio.com",
+    projectId: "petstuff-67506",
+    storageBucket: "petstuff-67506.appspot.com",
+    messagingSenderId: "602855780278"
+};
+//Young FireBase
+//var config = {
 
 
-    apiKey: "AIzaSyC1yYMNVs-rkVP040Su6ZwFSDVCXLZwC5I",
-    authDomain: "firstproject-c32a7.firebaseapp.com",
-    databaseURL: "https://firstproject-c32a7.firebaseio.com",
-    projectId: "firstproject-c32a7",
-    storageBucket: "firstproject-c32a7.appspot.com",
-    messagingSenderId: "1089648735509"
-  };
+//     apiKey: "AIzaSyC1yYMNVs-rkVP040Su6ZwFSDVCXLZwC5I",
+//     authDomain: "firstproject-c32a7.firebaseapp.com",
+//     databaseURL: "https://firstproject-c32a7.firebaseio.com",
+//     projectId: "firstproject-c32a7",
+//     storageBucket: "firstproject-c32a7.appspot.com",
+//     messagingSenderId: "1089648735509"
+//   };
  
 firebase.initializeApp(config);
 
@@ -65,9 +65,9 @@ $("#SubmitButton").on("click", function (event) {
     console.log("contact button press");
 
     contactName = $("#userName").val().trim();
-    contactEmail = $("#email").val().trim();
+    contactEmail = $("#emailAddIn").val().trim();
     contactPhone = $("#phone").val().trim();
-    animalId = $("#animalId").val().trim();
+    animalId = $("#IDAddIn").val().trim();
 
     //logs it in the database
     database.ref(`/contact/${contactName}`).push({
